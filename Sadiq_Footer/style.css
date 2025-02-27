@@ -1,0 +1,30 @@
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+h3{
+    font-size: 24px;
+}
+.left{
+    display: flex;
+    flex-direction: row;    
+}
+.right{
+    margin-top: 20px;
+}
+.left-column1{
+    margin-right: 80px;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+}
+input{
+    margin-bottom: 20px;
+}
