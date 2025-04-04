@@ -1,0 +1,355 @@
+/* html{
+    background: url(/images/photography-1166895.jpg) no-repeat fixed;
+    background-size: cover;
+    
+} */
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ /* Logo and searchbar container */
+
+ /*--Header-- Logo and searchbar container */
+
+ .main-header{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    flex-wrap: wrap;
+ }
+ 
+ .logo{
+    margin-left: 120px;
+    margin-top: 20px;
+ 
+ }
+
+ /* weather and geolocation */
+
+ #weather {
+    position: absolute;
+    top: 50px;
+    right: 140px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    
+}
+#weather img {
+    width: 30px;
+    height: 30px;
+}
+ 
+ /* Search bar  */
+
+ .searchbar{
+    display: flex;
+    align-items: center;
+    margin-left: -208px;    /*Subtracting the image spacing, to center the searchbar*/
+    background-color: #efeeee;
+    border-radius: 32px;
+    transition: box-shadow 0.25s;
+    padding: 1em;
+    height: 20px;
+
+}
+.search-container{
+    margin: 0 auto;
+}
+
+.searchbar:focus-within{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
+}
+
+.searchbar input{
+    width: 700px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #333333;
+    font-size: 1.3em;
+}
+
+
+.searchbar input::placeholder,
+.search-icon{
+    color: rgba(0, 0, 0, 0.5);
+   
+}
+.search-icon{
+    cursor: pointer;
+}
+
+
+/* Naivgation ul  */
+
+ .navigation{
+     display: flex;
+     justify-content: center;
+     margin: 80px auto 0px;
+     /* width: 95%; */
+     margin-top: 10px;
+     margin-bottom: 50px;
+     background: linear-gradient(45deg, blue,red, rgb(0, 0, 0));
+     /* box-shadow: 2px 2px 5px black; */
+     height: 60px;
+     align-items: center;
+     border-radius: 20px 20px 0px 0px;
+     
+ }
+
+ 
+ nav ul{
+     display: flex;
+     align-items: center;
+     gap: 40px;
+     list-style: none;
+     padding-left: 0px;
+ }
+ 
+ nav ul li{
+     font-size: 1.4em;
+     font-weight: bold;
+     padding: 0 20px;
+     
+ }
+ 
+ nav ul li a{
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+    
+ }
+ 
+ nav ul li a:hover{
+     text-shadow: 2px 2px 2px gray;
+     text-decoration: underline;
+     color: red;
+ }
+ 
+  .active{
+     text-shadow: 2px 2px 2px #808080;
+     text-decoration: underline;
+     color: red;
+     font-size: 1.125em;
+ }
+
+/* Main Content */
+
+main{
+    background-color: #fefefe;
+    border-radius: 20px 20px 0px 0px;
+    
+}
+ /* .main-header{
+    display: flex;
+    align-items: center;
+    margin: 40px 0px;
+    flex-wrap: wrap;
+ }
+ 
+ .logo{
+    margin-left: 80px;
+    margin-top: 20px;
+    
+ } */
+ 
+ /* Search bar  */
+
+ /* .searchbar{
+    display: flex;
+    align-items: center;
+    margin-left: -208px;    Subtracting the image spacing, to center the searchbar */
+    /* background-color: #efeeee;
+    border-radius: 32px;
+    transition: box-shadow 0.25s;
+    padding: 1em;
+    height: 20px;
+
+}
+.search-container{
+    margin: 0 auto;
+}
+
+.searchbar:focus-within{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
+}
+
+.searchbar input{
+    width: 900px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #333333;
+    font-size: 1.3em;
+}
+
+
+.searchbar input::placeholder,
+.search-icon{
+    color: rgba(0, 0, 0, 0.5);
+   
+}
+.search-icon{
+    cursor: pointer;
+} */
+
+
+/* Naivgation ul  */
+/* 
+ .navigation{
+     display: flex;
+     justify-content: center;
+     margin: 160px;
+     margin-top: 20px;
+     background-color: #ffffff;
+     box-shadow: 2px 2px 5px black;
+     height: 210px;
+     border: 1px solid black;
+     border-radius: 2px;
+     position: sticky;
+     align-items: center;
+     
+ }
+
+ 
+ nav ul{
+     display: flex;
+     align-items: center;
+     gap: 40px;
+     list-style: none;
+     padding-left: 0px;
+ }
+ 
+ nav ul li{
+     font-size: 1.4em;
+     font-weight: bold;
+     padding: 0 20px;
+     
+ }
+ 
+ nav ul li a{
+     color: black;
+     text-decoration: none;
+    
+ }
+ 
+ nav ul li a:hover{
+     text-shadow: 2px 2px 2px gray;
+     text-decoration: underline;
+     color: red;
+ }
+ 
+  .active{
+     text-shadow: 2px 2px 2px #808080;
+     text-decoration: underline;
+     color: red;
+     font-size: 1.125em;
+ }
+  */
+
+ /* Respsonsive Design - laptops */
+
+ @media screen and (min-width: 1201px) and (max-width: 1440px){
+    
+    .searchbar{
+       max-width: 600px;
+
+    }
+    
+    .searchbar input{
+        width: 500px;
+
+    }
+
+    .navigation{
+        height: 180px;
+    }
+
+    nav ul li{
+        font-size: 1.4em;
+
+    }
+    
+ }
+
+/* Respsonsive Design - Tablets and Smaller Laptop Sizes*/
+
+ @media screen and (min-width: 1081px) and (max-width: 1200px){
+
+    .searchbar{
+        max-width: 500px;
+     }
+     
+     .searchbar input{
+         width: 400px;
+ 
+     }
+
+     .searchbar-container{
+        margin-left: 0px; 
+
+    }
+
+     .navigation{
+         height: 150px;
+     }
+ 
+     nav ul li{
+         font-size: 1.2em;
+ 
+     }
+
+ }
+
+
+ /* Respsonsive Design - Phone and other tablet sizes */
+
+ @media screen and (max-width: 1080px){
+
+    .main-header{
+        justify-content: center;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 40px 0px;
+    }
+
+
+    .searchbar{
+        margin-left: 0px;
+        margin-top: 10px;
+        padding: 12px;
+
+     }
+     
+     .searchbar input{
+         min-width: 200px;
+         max-width: 250px;
+ 
+     }
+ 
+     .navigation{
+         height: 120px;
+         margin: 30px auto;
+         max-width: 600px;
+         min-width: fit-content;
+     }
+     nav ul{
+        gap: 25px;
+     }
+
+     nav ul li{
+         font-size: 1em;
+         padding: 0px;   
+     }
+
+ }

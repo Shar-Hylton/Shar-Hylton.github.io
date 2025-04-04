@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Feed with Filters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .filters {
+            margin-bottom: 20px;
+        }
+        .filters button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .filters button:hover {
+            background: #0056b3;
+        }
+        .news-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .news-item {
+            width: 400px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            position: relative;
+        }
+        .news-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .news-item h3 {
+            font-size: 16px;
+        }
+        .news-item button {
+            background: #28a745;
+            color: white;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .news-item button:hover {
+            background: #218838;
+        }
+        .full-article {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-left: 5px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Live News Feed</h2>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+        <button onclick="fetchNews('general')">General</button>
+        <button onclick="fetchNews('business')">Business</button>
+        <button onclick="fetchNews('technology')">Technology</button>
+        <button onclick="fetchNews('sports')">Sports</button>
+        <button onclick="fetchNews('health')">Health</button>
+        <button onclick="fetchNews('entertainment')">Entertainment</button>
+        <button onclick="fetchNews('science')">Science</button>
+    </div>
+
+    <div class="news-container" id="news-feed"></div>
+
+    <script>
+        async function fetchNews(category) {
+            const apiKey = "a577c6c8fdc7451db9fed7ca041c61c8"; // Replace with your actual API key
+            const newsUrl = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=6&apiKey=${apiKey}`;
+
+            try {
+                const response = await fetch(newsUrl);
+                const data = await response.json();
+
+                let output = "";
+                data.articles.forEach((article, index) => {
+                    const title = article.title || "No Title Available";
+                    const description = article.description || "No description available.";
+                    const link = article.url;
+                    const imageUrl = article.urlToImage || "https://via.placeholder.com/400"; // Default image
+                    const content = article.content || "Full article content not available. Click the link to read more.";
+
+                    output += `
+                        <div class="news-item">
+                            <img src="${imageUrl}" alt="News Image">
+                            <h3>${title}</h3>
+                            <p>${description}</p>
+                            <button onclick="showArticle(${index})">Read More</button>
+                            <div id="article-${index}" class="full-article">
+                                <p>${content}</p>
+                                <a href="${link}" target="_blank">Continue reading...</a>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                document.getElementById("news-feed").innerHTML = output;
+
+            } catch (error) {
+                console.error("Error fetching news:", error);
+            }
+        }
+
+        function showArticle(index) {
+            const articleDiv = document.getElementById(`article-${index}`);
+            if (articleDiv.style.display === "none" || articleDiv.style.display === "") {
+                articleDiv.style.display = "block";
+            } else {
+                articleDiv.style.display = "none";
+            }
+        }
+
+        // Load default category on page load
+        fetchNews('general');
+    </script>
+
+</body>
+</html>

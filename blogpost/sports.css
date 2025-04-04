@@ -1,0 +1,76 @@
+main{
+    margin: 60px;
+}
+
+
+#feed{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+.blog{
+    margin: 3px;
+    box-shadow: -3px 3px 10px black;
+    border-radius: 10px;
+}
+.card{
+    background-color: #eee4d8;
+    border-radius: 10px;
+    max-width: 320px;
+    height: 370px;
+    
+}
+
+.card p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 0.9em;
+    margin: 10px;
+    line-height: 1.125em;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+img{
+    border-radius: 10px 10px 0 0;
+    
+}
+
+.view-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-more button{
+    background-color: #eacfae;
+    margin: 5px;
+    border: 3px solid white;
+    border-radius: 80px;
+    height: 40px;
+    width: 110px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    
+}
+
+.view-more a{
+    color: black;
+    font-weight: 550;
+    font-size: 1.3em;
+    text-decoration: none;
+
+}
+
+.view-more button:hover{
+    height: 55px;
+    width: 130px;
+    position: relative;
+    bottom: 10px;
+    z-index: 9;
+    font-size: 1.301em;
+    box-shadow: -5px 2px 8px black;
+}
