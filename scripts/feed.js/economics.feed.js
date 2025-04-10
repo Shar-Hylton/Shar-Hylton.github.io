@@ -1,7 +1,7 @@
 //--- fetching news data from NewsAPI.org ---
 
-const apiKey = "a577c6c8fdc7451db9fed7ca041c61c8";
-const feedUrl = `https://newsapi.org/v2/top-headlines?country=us&pageSize=20&apiKey=${apiKey}`;
+const apiKey = "221adb9d0efc4378bf1a13211c213319";
+const feedUrl = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`;
 
 const fetchFeed = async () => {
   try {
