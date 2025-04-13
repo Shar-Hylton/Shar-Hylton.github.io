@@ -1,0 +1,62 @@
+
+/* Ensure the modal covers the entire viewport */
+#policy-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#policy-modal.activate {
+  display: flex;
+}
+
+/* Style the modal content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px; /* Apply rounded corners */
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh; /* Limit the height to make it scrollable */
+  overflow-y: auto; /* Enable vertical scrolling */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* Make this container the reference for the close button */
+  clip-path: inset(0 round 12px); /* Ensure the border-radius applies to the scrollable area */
+}
+
+/* Style the scrollbar for a rounded effect */
+.modal-content::-webkit-scrollbar {
+  width: 8px; /* Adjust scrollbar width */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); 
+  border-radius: 8px; 
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
+}
+
+
+
+
+/* Style the close button */
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  right: 10px; 
+  cursor: pointer;
+  color: #333; 
+}

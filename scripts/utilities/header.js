@@ -9,7 +9,7 @@ function loadHeader() {
             <div id="weather">Loading...</div>
           </div>
   
-          <div class="search-container">
+         <div class="search-container">
             <div class="searchbar">
               <span class="search-icon material-symbols-outlined">search</span>
               <input id="search" type="search" placeholder="Search" maxlength="1000" />
@@ -17,6 +17,7 @@ function loadHeader() {
           </div>
         </div>
       
+      <div id="results"></div>
     `;
     document.getElementById("site-header").innerHTML = headerHTML;
    

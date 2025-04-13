@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Script for socila media links imported from font awesome -->
-    <script
-      src="https://kit.fontawesome.com/4eed10a0c3.js"
-      crossorigin="anonymous"
-    ></script>
+    <meta name="description" content="Contact us for inquiries and support" />
+    <meta name="keywords" content="contact, support, inquiries" />
+    <meta name="author" content="Multimedia News" />
+    <title>Contact Us</title>
 
     <link
       rel="stylesheet"
@@ -15,53 +14,43 @@
     />
     <link rel="stylesheet" href="/styles/normalize.css" type="text/css" />
     <link rel="stylesheet" href="/styles/contact.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/policy.pages.css" type="text/css" />
 
-    <title>Contact Us</title>
+    <!-- Script for social media links imported from font awesome -->
+
+    <script
+      src="https://kit.fontawesome.com/4eed10a0c3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="/scripts/utilities/header.js" defer></script>
+    <script src="/scripts/feed/main.feed.js" defer></script>
+    <script src="/scripts/utilities/search.js" defer></script>
+    <script src="/scripts/jQuery.js" defer></script>
+    <script src="/scripts/utilities/footer.js" defer></script>
+    <script src="/scripts/utilities/subscribe.js" defer></script>
+    <script src="/scripts/utilities/modal.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="main-header">
-        <div class="logo">
-          <a href="/html/home/home.html"
-            ><img
-              src="/logo/MMN.png"
-              alt="Multimedia News logo"
-              height="128"
-              width="128"
-            />
-          </a>
-        </div>
+    <header id="site-header">
+      <!-- Dynamic header -->
+    </header>
 
-        <!-- Search bar that works with javascript -->
-
-        <div class="search-container">
-          <div class="searchbar">
-            <!-- From Google fonts -->
-            <span class="search-icon material-symbols-outlined"> search </span>
-            <input
-              id="search"
-              type="search"
-              placeholder="Search"
-              maxlength="1000"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="navigation">
+    <main>
+      <section class="navigation">
         <nav class="navbar">
           <ul>
             <li><a href="/html/home/home.html">Home</a></li>
-            <li><a href="/html/politics/politics.html" class="active">Politics</a></li>
+            <li><a href="/html/politics/politics.html">Politics</a></li>
             <li><a href="/html/sports/sports.html">Sports</a></li>
             <li>
               <a href="/html/entertainment/entertainment.html">Entertainment</a>
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
+      </section>
 
-    <main>
       <section class="hero">
         <div class="overlay-box">Contact Us</div>
 
@@ -88,65 +77,8 @@
       </section>
     </main>
 
-    <footer>
-      <div class="footer-container">
-        <section class="footer-nav-links">
-          <h2>Quick Links</h2>
-
-          <ul class="quick-links">
-            <li><a href="/html/economics/economics.html">Economics</a></li>
-            <li><a href="/html/contact/contact.html">Contact Us</a></li>
-            <li><a href="/html/weather/weather.html">Weather</a></li>
-            <li><a href="/html/market/market.html">Market</a></li>
-          </ul>
-        </section>
-
-        <section class="newsletter">
-          <h3>Subscribe To Our Newsletter</h3>
-          <form>
-            <input type="email" placeholder="Email" />
-            <button type="submit">Subscribe</button>
-          </form>
-          <div class="social">
-            <a href="#" title="Facebook"
-              ><i
-                class="facebook fa-brands fa-facebook fa-xl social-links"
-                style="color: #d5f9f9"
-              ></i
-            ></a>
-            <a href="#" title="Instagram"
-              ><i
-                class="instagram fa-brands fa-instagram fa-xl social-links"
-                style="color: #e70dca"
-              ></i
-            ></a>
-            <a href="#" title="X-formerly-twttier"
-              ><i
-                class="fa-solid fa-xmark fa-xl social-links"
-                style="color: #ffffff"
-              ></i
-            ></a>
-            <a href="#" title="YouTube"
-              ><i
-                class="fa-brands fa-youtube fa-xl social-links"
-                style="color: #ff0000"
-              ></i
-            ></a>
-          </div>
-        </section>
-      </div>
-
-      <div class="policy">
-        <ul class="legal-pages">
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Cookie Policy</a></li>
-        </ul>
-
-        <div class="copyright">
-          <p>Multimedia News &copy;, All rights reserved!</p>
-        </div>
-      </div>
+    <footer id="site-footer">
+      <!-- Dynamic Script -->
     </footer>
   </body>
 </html>

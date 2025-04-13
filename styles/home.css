@@ -73,7 +73,7 @@ body{
     outline: none;
     background: transparent;
     color: #333333;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 
@@ -133,12 +133,13 @@ body{
      color: red;
  }
  
-  .active{
-     text-shadow: 2px 2px 2px #808080;
-     text-decoration: underline;
-     color: red;
-     font-size: 1.125em;
- }
+ .active{
+    text-shadow: 2px 2px 3px #808080;
+    text-decoration: underline;
+    color: blue;
+    font-size: 1.125em;
+    filter: brightness(200%);
+}
 
 /* Main Content */
 
@@ -158,14 +159,6 @@ main{
     margin: 5px 70px;
 }
 
-
-/* #feeds{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    gap: 20px;
-
-} */
 .news-container{
     display: flex;
     flex-wrap: wrap;
@@ -198,9 +191,38 @@ main{
     border-left: 5px solid #007bff;
 }
 
+.publish-date{
+    font-size: 0.8em;
+    color: #333;
+  
+}
+  
+  .publish-date p{
+    margin-bottom: 20px;
+  
+}
+  
+
+#feeds a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#feeds span p{
+    font-size: 0.8em;
+    color: #333;
+}
+
 #feeds h3{
     color: black;
     font-size: 16px
+}
+
+.feed-card{
+    position: relative; 
+    min-height: 480px; 
+    padding-bottom: 50px;
+    overflow: hidden;
 }
 
 .feed-card p{
@@ -208,10 +230,71 @@ main{
     margin: 5px;
 }
 
+.no-results {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .no-results strong {
+    color: #000;
+  }
 
+/*--feed icons--*/
 
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px; 
+    width: 120px;
+  }
+  
+  /* Style the icons with a rounded background */
+  .icon {
+    cursor: pointer;
+    font-size: 1em; 
+    color: #777;
+    background: white; 
+    border-radius: 50%; 
+    padding: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
+  }
+  
+  /* Hover effect for the icons */
+  .icon:hover {
+    transform: scale(1.05);
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Style the count numbers */
+  .count {
+    font-size: 0.9em; 
+    font-weight: bold;
+    color: red; 
+    position: absolute;
+    top: -2px; 
+    left: 80%; 
+    transform: translateX(-50%);
+    transition: all 0.3s ease; 
+    opacity: 0; 
+  }
+  
 
-
+  .icon:hover .count {
+    opacity: 1; /* Make the count visible */
+    transform: translateX(-50%) translateY(-5px); /* Slightly move the count upward */
+  }
+  
+  
  /* footer css */
 
  footer{
@@ -344,6 +427,9 @@ h2, h3{
 .social:hover{
     cursor: pointer;
 }
+
+
+  
 
  /* Respsonsive Design - laptops */
 

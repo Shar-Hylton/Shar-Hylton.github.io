@@ -11,6 +11,11 @@
     />
     <link rel="stylesheet" href="/styles/normalize.css" type="text/css" />
     <link rel="stylesheet" href="/styles/home.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/policy.pages.css" type="text/css" />
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css"
+/>
     
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -22,14 +27,19 @@
       src="https://kit.fontawesome.com/4eed10a0c3.js"
       crossorigin="anonymous"
     ></script>
-    <script src="/scripts/feed.js/" defer></script>
+   <script src="/scripts/utilities/header.js" defer></script>
+   <script src="/scripts/feed/main.feed.js" defer></script>
+   <script src="/scripts/jQuery.js"></script>
+   <script src="/scripts/utilities/footer.js" defer></script>
+   <script src="/scripts/utilities/subscribe.js" defer></script>
+   <script src="/scripts/utilities/modal.js" defer></script>
+   
+  
   </head>
   <body>
     <header id="site-header">
       <!-- Scripts go here -->
-      <script src="/scripts/home.header.js/home.header.js"></script>
-      <script src="/scripts/feed.js/home.feed.js"></script>
-      <script src="/scripts/slicknav.js/slicknav.js"></script>
+     
     </header>
 
     <main>
@@ -55,65 +65,9 @@
       </section>
     </main>
 
-    <footer>
-      <div class="footer-container">
-        <section class="footer-nav-links">
-          <h2>Quick Links</h2>
-
-          <ul class="quick-links">
-            <li><a href="/html/contact/contact.html">Contact Us</a></li>
-            <li><a href="/html/economics/economics.html">Economics</a></li>
-            <li><a href="/html/weather/weather.html">Weather</a></li>
-            <li><a href="/html/market/market.html">Market</a></li>
-          </ul>
-        </section>
-
-        <section class="newsletter">
-          <h3>Subscribe To Our Newsletter</h3>
-          <form>
-            <input type="email" placeholder="Email" />
-            <button type="submit">Subscribe</button>
-          </form>
-          <div class="social">
-            <a href="#" title="Facebook"
-              ><i
-                class="facebook fa-brands fa-facebook fa-xl social-links"
-                style="color: #d5f9f9"
-              ></i
-            ></a>
-            <a href="#" title="Instagram"
-              ><i
-                class="instagram fa-brands fa-instagram fa-xl social-links"
-                style="color: #e70dca"
-              ></i
-            ></a>
-            <a href="#" title="X-formerly-twttier"
-              ><i
-                class="fa-solid fa-xmark fa-xl social-links"
-                style="color: #ffffff"
-              ></i
-            ></a>
-            <a href="#" title="YouTube"
-              ><i
-                class="fa-brands fa-youtube fa-xl social-links"
-                style="color: #ff0000"
-              ></i
-            ></a>
-          </div>
-        </section>
-      </div>
-
-      <div class="policy">
-        <ul class="legal-pages">
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Cookie Policy</a></li>
-        </ul>
-
-        <div class="copyright">
-          <p>Multimedia News &copy;, All rights reserved!</p>
-        </div>
-      </div>
+    <footer id="site-footer">
+      <!-- footer.js here -->
     </footer>
+
   </body>
 </html>

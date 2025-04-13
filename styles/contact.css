@@ -1,13 +1,164 @@
-/* HERO SECTION: Reduce extra space */
+html{
+    
+  background-color: #fefefe;
 
+}
+
+body{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+/*--Header-- Logo and searchbar container */
+
+header{
+  margin-top: -10px;
+  background: url('/images/sun-208428.jpg') no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+
+.main-header{
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0;
+  padding: 30px 0;;
+  flex-wrap: wrap;
+ 
+}
+
+.logo{
+  margin-left: 120px;
+  margin-top: 20px;
+
+}
+
+/* Naivgation ul  */
+
+.navigation{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 5px;
+  background: linear-gradient(45deg, blue,red, rgb(0, 0, 0));
+  height: 60px;
+  align-items: center;
+  position: sticky;
+  top:0;
+  z-index: 9; 
+  
+}
+
+
+nav ul{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  padding-left: 0px;
+
+}
+
+nav ul li{
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 0 20px;
+  
+}
+
+nav ul li a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+ 
+}
+
+nav ul li a:hover{
+  text-shadow: 2px 2px 2px gray;
+  text-decoration: underline;
+  color: red;
+}
+
+.active{
+  text-shadow: 2px 2px 3px #808080;
+  text-decoration: underline;
+  color: blue;
+  font-size: 1.125em;
+  filter: brightness(200%);
+}
+
+
+
+/* weather and geolocation */
+
+#weather {
+  position: absolute;
+  top: 70px;
+  right: 120px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  
+}
+#weather img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Search bar  */
+
+.searchbar{
+  display: flex;
+  align-items: center;
+  margin-left: -208px;    /*Subtracting the image spacing, to center the searchbar*/
+  background-color: #efeeee;
+  border-radius: 32px;
+  transition: box-shadow 0.25s;
+  padding: 1em;
+  height: 20px;
+
+}
+.search-container{
+  margin: 0 auto;
+}
+
+.searchbar:focus-within{
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
+}
+
+.searchbar input{
+  width: 650px;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #333333;
+  font-size: 1em;
+}
+
+
+.searchbar input::placeholder,
+.search-icon{
+  color: rgba(0, 0, 0, 0.5);
+ 
+}
+.search-icon{
+  cursor: pointer;
+}
+
+/* HERO SECTION: Reduce extra space */
+ 
 .hero {
-  background: url('../Images/background.jpeg') center/cover no-repeat;
+  background: url("/html/contact/Images/background.jpeg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 65vh; /* Reduce height slightly */
   padding: 2rem 0;
+  margin-top: -5px;
 }
 
 /* "Contact Us" Title */
@@ -42,21 +193,8 @@
 }
 
 
-/* RESPONSIVE FIX: Make it a single column layout on smaller screens */
-@media (max-width: 1024px) {
-  .hero {
-    min-height: 60vh;
-  }
-  .contact-container {
-    grid-template-columns: 1fr; /* Switch to 1 column layout */
-    width: 100%;
-    gap: 1.5rem;
-  }
-  .contact-box {
-    width: 90%; /* Expand boxes for readability */
-    margin: 0 auto; /* Center boxes */
-  }
-}
+
+
 
 /* footer style */
 
@@ -65,14 +203,27 @@ footer{
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
-  background-color: #cccccc76;
+  background-color: #cccccc76; 
   /* border-radius: 0 0 20px 20px; */
+  
+}
+
+/* footer css */
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  background: url(/images/sun-208428.jpg) no-repeat fixed;
+  border-radius: 0 0 20px 20px;
   
 }
 
 footer ul{
   list-style: none;
   font-size: 1.125em;
+  
 }
 
 footer ul li{
@@ -102,7 +253,7 @@ footer ul li a:hover{
   display: flex;
   width: 100%;
   background-color: #000000;
-  /* border-radius: 0 0 20px 20px; */
+  border-radius: 0 0 20px 20px;
   align-items: center;
 
 }
@@ -140,7 +291,7 @@ footer ul li a:hover{
 }
 
 h2, h3{
-  color: rgb(0, 0, 0);
+  color: black;
   text-decoration: underline
 }
 .quick-links{
@@ -188,4 +339,20 @@ h2, h3{
 }
 .social:hover{
   cursor: pointer;
+}
+
+/* RESPONSIVE FIX: Make it a single column layout on smaller screens */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 60vh;
+  }
+  .contact-container {
+    grid-template-columns: 1fr; /* Switch to 1 column layout */
+    width: 100%;
+    gap: 1.5rem;
+  }
+  .contact-box {
+    width: 90%; /* Expand boxes for readability */
+    margin: 0 auto; /* Center boxes */
+  }
 }

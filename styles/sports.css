@@ -1,76 +1,481 @@
-main{
-    margin: 60px;
+html{
+    
+    background-color: #fefefe;
+
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+ }
+
+ /*--Header-- Logo and searchbar container */
+
+ header{
+    margin-top: -10px;
+    background: url('/images/cycling-8215973_1920.jpg') no-repeat;
+    background-size: cover;
+    height: 30vh;
+}
+
+ .main-header{
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0;
+    padding: 30px 0;;
+    flex-wrap: wrap;
+   
+ }
+ 
+ .logo{
+    margin-left: 120px;
+    margin-top: 20px;
+ 
+ }
+
+ /* weather and geolocation */
+
+ #weather {
+    position: absolute;
+    top: 70px;
+    right: 120px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    
+}
+#weather img {
+    width: 30px;
+    height: 30px;
+}
+ 
+ /* Search bar  */
+
+ .searchbar{
+    display: flex;
+    align-items: center;
+    margin-left: -208px;    /*Subtracting the image spacing, to center the searchbar*/
+    background-color: #efeeee;
+    border-radius: 32px;
+    transition: box-shadow 0.25s;
+    padding: 1em;
+    height: 20px;
+
+}
+
+.search-container{
+    margin: 0 auto;
+}
+
+.searchbar:focus-within{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
+}
+
+.searchbar input{
+    width: 650px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #333333;
+    font-size: 1em;
 }
 
 
-#feed{
+.searchbar input::placeholder,
+.search-icon{
+    color: rgba(0, 0, 0, 0.5);
+   
+}
+.search-icon{
+    cursor: pointer;
+}
+
+
+/* Naivgation ul  */
+
+ .navigation{
+     display: flex;
+     justify-content: center;
+     margin: 0 auto 5px;
+     background: linear-gradient(45deg, blue,red, rgb(0, 0, 0));
+     height: 60px;
+     align-items: center;
+     position: sticky;
+     top:0;
+     z-index: 9; 
+     
+ }
+  
+ 
+ nav ul{
+     display: flex;
+     align-items: center;
+     gap: 40px;
+     list-style: none;
+     padding-left: 0px;
+
+ }
+ 
+ nav ul li{
+     font-size: 1.4em;
+     font-weight: bold;
+     padding: 0 20px;
+     
+ }
+ 
+ nav ul li a{
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+    
+ }
+ 
+ nav ul li a:hover{
+     text-shadow: 2px 2px 2px gray;
+     text-decoration: underline;
+     color: red;
+ }
+ 
+.active{
+     text-shadow: 2px 2px 3px #808080;
+     text-decoration: underline;
+     color: blue;
+     font-size: 1.125em;
+     filter: brightness(200%);
+ }
+
+/* Main Content */
+
+main{
+    background-color: #fefefe;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 80px;
+    
+}
+
+.feed-container{
+    margin: 0 500px;   
+} 
+
+#feeds #loading{
+    font-size: 1.5em;
+}
+
+.feed-container h3{
+    font-size: 1.8em;
+    color: #000000;
+    margin: 70px 0 20px;
+    text-align: center;
+}
+
+.news-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    justify-content: space-between;
+    padding: 20px;
 }
 
-
-.blog{
-    margin: 3px;
-    box-shadow: -3px 3px 10px black;
-    border-radius: 10px;
-}
-.card{
-    background-color: #eee4d8;
-    border-radius: 10px;
-    max-width: 320px;
-    height: 370px;
-    
-}
-
-.card p{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    font-size: 0.9em;
-    margin: 10px;
-    line-height: 1.125em;
-    border-bottom: 2px solid black;
-    padding-bottom: 10px;
+.feed-card{
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative; 
+    min-height: 480px; 
+    padding-bottom: 40px;
+    overflow: hidden;
 }
 
-img{
-    border-radius: 10px 10px 0 0;
-    
+.feed-card img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
-.view-more{
+.full-article{
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 5px solid #007bff;
+}
+
+.publish-date{
+    font-size: 0.8em;
+    color: #333;
+  
+}
+  
+.publish-date p{
+    margin-bottom: 20px;
+  
+}  
+
+#feeds a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#feeds span p{
+    font-size: 0.8em;
+    color: #000000;
+    margin-left: 5px;
+}
+
+#feeds h3{
+    color: black;
+    font-size: 16px
+}
+
+.feed-card p{
+    padding-left: 5px;
+    margin: 5px;
+}
+
+/*--feed icons--*/
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px; 
+    width: 120px;
+  }
+  
+  /* Style the icons with a rounded background */
+  .icon {
+    cursor: pointer;
+    font-size: 1em; 
+    color: #777;
+    background: white; 
+    border-radius: 50%; 
+    padding: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    position: relative;
+   
+  }
+  
+  /* Hover effect for the icons */
+  .icon:hover {
+    transform: scale(1.05);
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Style the count numbers */
+  .count {
+    font-size: 0.9em; 
+    font-weight: bold;
+    color: red; 
+    position: absolute;
+    top: -2px; 
+    left: 80%; 
+    transform: translateX(-50%);
+    transition: all 0.3s ease; 
+    opacity: 0; 
+  }
+  
 
-.view-more button{
-    background-color: #eacfae;
-    margin: 5px;
-    border: 3px solid white;
-    border-radius: 80px;
-    height: 40px;
-    width: 110px;
-    font-family: 'Times New Roman', Times, serif;
-    color: black;
+  .icon:hover .count {
+    opacity: 1; /* Make the count visible */
+    transform: translateX(-50%) translateY(-5px); /* Slightly move the count upward */
+  }
+  
+
+/*--feed icons--*/
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px; 
+    width: 120px;
+  }
+  
+  /* Style the icons with a rounded background */
+  .icon {
+    cursor: pointer;
+    font-size: 1em; 
+    color: #777;
+    background: white; 
+    border-radius: 50%; 
+    padding: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
+  }
+  
+  /* Hover effect for the icons */
+  .icon:hover {
+    transform: scale(1.05);
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Style the count numbers */
+  .count {
+    font-size: 0.9em; 
+    font-weight: bold;
+    color: red; 
+    position: absolute;
+    top: -2px; 
+    left: 80%; 
+    transform: translateX(-50%);
+    transition: all 0.3s ease; 
+    opacity: 0; 
+  }
+  
+
+  .icon:hover .count {
+    opacity: 1; /* Make the count visible */
+    transform: translateX(-50%) translateY(-5px); /* Slightly move the count upward */
+  }
+
+ /* footer css */
+
+ footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    background: url(/images/sun-208428.jpg) no-repeat fixed;
+    border-radius: 0 0 20px 20px;
     
 }
 
-.view-more a{
-    color: black;
-    font-weight: 550;
-    font-size: 1.3em;
+footer ul{
+    list-style: none;
+    font-size: 1.125em;
+    
+}
+
+footer ul li{
+    margin-bottom: 3px;
+}
+
+footer ul li a{
     text-decoration: none;
+    margin-left: -40px;
+    color:#0000ff;
+}
+
+footer ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* copyright and policy links */
+
+.policy{
+    display: flex;
+    width: 100%;
+    background-color: #000000;
+    border-radius: 0 0 20px 20px;
+    align-items: center;
 
 }
 
-.view-more button:hover{
-    height: 55px;
-    width: 130px;
-    position: relative;
-    bottom: 10px;
-    z-index: 9;
-    font-size: 1.301em;
-    box-shadow: -5px 2px 8px black;
+.copyright{ 
+    width: 100%;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+
 }
+.copyright p{
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+.legal-pages{
+    display: flex;
+    position: absolute;
+
+}
+
+.legal-pages li{
+    padding-left: 60px;
+    font-size: 0.75em;
+    
+}
+
+.legal-pages > li:nth-child(-n+2)::after{
+    content: '|';
+    color: white;
+    margin-left: 20px;
+    
+}
+
+h2, h3{
+    color: black;
+    text-decoration: underline
+}
+.quick-links{
+    font-weight: bold;
+    text-align: center;
+}
+
+/* news letter and social */
+
+.newsletter form input{
+    border-radius: 4px;
+    outline: 1px solid yellow;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.newsletter form input::placeholder{
+    padding-left: 2px;
+    color: #333333b1;
+}
+
+.newsletter form input:focus-within{
+    
+    box-shadow: 2px 1px 12px yellow;
+}
+
+.newsletter form button{
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgba(255, 0, 0, 0.34);
+    border-radius: 4px;
+    padding: 2px;
+    font: bold 0.9em 'Times New Roman', Times, serif;
+}
+
+.newsletter form button:hover{
+    box-shadow: 2px 1px 12px red;
+}
+  
+.social{
+    margin-top: 25px;
+    display: flex;
+    max-width: 150px;
+    justify-content: space-between;
+    
+}
+.social:hover{
+    cursor: pointer;
+}
+
