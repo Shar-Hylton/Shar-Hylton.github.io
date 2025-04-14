@@ -14,6 +14,13 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
     />
+    <!-- SlickNav CSS -->
+    <link rel="stylesheet" href="/SlickNav/dist/slicknav.css" />
+    <!-- <link rel="stylesheet" href="/SlickNav/dist/slicknav.min.css" /> -->
+
+    <!-- SlickNav JS -->
+    <script src="/SlickNav/jquery.slicknav.js" defer></script>
+    <script src="/SlickNav/dist/jquery.slicknav.min.js"defer></script>
 
     <!-- font awesome script -->
     <script
@@ -33,24 +40,27 @@
     <script src="/scripts/utilities/footer.js" defer></script>
     <script src="/scripts/utilities/subscribe.js" defer></script>
     <script src="/scripts/utilities/modal.js" defer></script>
-    
   </head>
   <body>
     <header id="site-header">
       <!-- Scripts go here -->
-     
     </header>
 
     <main class="sports">
-      <div class="navigation" id="mobile_menu">
+      <div class="navigation">
         <nav class="navbar">
-          <ul>
+          <ul id="menu">
             <li><a href="/html/home/home.html">Home</a></li>
             <li><a href="/html/politics/politics.html">Politics</a></li>
             <li><a href="#" class="active">Sports</a></li>
             <li>
               <a href="/html/entertainment/entertainment.html">Entertainment</a>
             </li>
+            <li><a href="/html/economics/economics.html">Economics</a></li>
+
+            <li class="slicknav-only"><a href="/html/weather/weather.html">Weather</a></li>
+            <li class="slicknav-only"><a href="/html/market/market.html">Market</a></li>
+            <li class="slicknav-only"><a href="/html/contact/contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -59,10 +69,12 @@
         <h3>Sports News</h3>
 
         <section class="news-container" id="feeds">
-        <h3 id="loading"> Loading sports feed... </h3>
+          <h3 id="loading">Loading sports feed...</h3>
           <!-- News fetch data goes here -->
         </section>
       </section>
+      <!-- Scroll to top -->
+      <button id="back-to-top-btn" title="Back to Top">↑</button>
     </main>
 
     <footer id="site-footer">
@@ -70,4 +82,3 @@
     </footer>
   </body>
 </html>
-  

@@ -96,7 +96,7 @@ body{
      margin-top: 10px;
      margin-bottom: 50px;
      background: linear-gradient(45deg, blue,red, rgb(0, 0, 0));
-     height: 60px;
+     height: 40px;
      align-items: center;
      border-radius: 20px 20px 0px 0px;
      position: sticky;
@@ -115,7 +115,7 @@ body{
  }
  
  nav ul li{
-     font-size: 1.4em;
+     font-size: 1.2em;
      font-weight: bold;
      padding: 0 20px;
      
@@ -144,7 +144,7 @@ body{
 /* Main Content */
 
 main{
-    background-color: #fefefe;
+    background-color: #f5f5f5;
     border-radius: 20px 20px 0px 0px;
     
 }
@@ -177,6 +177,13 @@ main{
     position: relative;
 }
 
+.feed-card:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
 .feed-card img{
     width: 100%;
     height: auto;
@@ -191,6 +198,14 @@ main{
     border-left: 5px solid #007bff;
 }
 
+.full-article p{
+    transition: font-size 0.3s ease-in-out;
+  }
+  
+  .full-article p:hover{
+    font-size: 1.5em;
+  }
+
 .publish-date{
     font-size: 0.8em;
     color: #333;
@@ -202,6 +217,9 @@ main{
   
 }
   
+#feeds #loading{
+    font-size: 1.5em;
+}
 
 #feeds a{
     text-decoration: none;
@@ -216,6 +234,11 @@ main{
 #feeds h3{
     color: black;
     font-size: 16px
+}
+
+#feeds h4{
+    color: blue;
+    font-size: 1.4em; 
 }
 
 .feed-card{
@@ -297,270 +320,125 @@ main{
   
  /* footer css */
 
- footer{
+footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
-    background-color: #cccccc76;
+    background: url("/images/sun-208428.jpg") no-repeat fixed;
     border-radius: 0 0 20px 20px;
+    border: 2px solid white;
     
-}
-
-footer ul{
-    list-style: none;
-    font-size: 1.125em;
-    
-}
-
-footer ul li{
-    margin-bottom: 3px;
-}
-
-footer ul li a{
-    text-decoration: none;
-    margin-left: -40px;
-    color:#0000ff;
-}
-
-footer ul li a:hover{
-    color: red;
-    text-decoration: underline;
-}
-
-.footer-container{
+  }
+  
+  .footer-container{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
-
-/* copyright and policy links */
-
-.policy{
+    height: 30vh;
+  }
+  
+  /* copyright and policy links */
+  
+  .policy{
     display: flex;
     width: 100%;
     background-color: #000000;
     border-radius: 0 0 20px 20px;
     align-items: center;
-
-}
-
-.copyright{ 
+  
+  }
+  
+  .copyright{ 
     width: 100%;
     font-size: 1em;
     color: rgb(255, 255, 255);
     text-decoration: underline;
-
-}
-.copyright p{
+  
+  }
+  .copyright p{
     text-align: center;
     font-size: 0.9em;
-}
-
-
-.legal-pages{
+  }
+  
+  
+  .legal-pages{
     display: flex;
     position: absolute;
-
-}
-
-.legal-pages li{
-    padding-left: 60px;
+  
+  }
+  
+  .legal-pages li{
+    padding-left: 20px;
     font-size: 0.75em;
     
-}
+  }
 
-.legal-pages > li:nth-child(-n+2)::after{
+  .legal-pages li a{
+    color: white;
+    text-decoration: none;
+  }
+  .legal-pages li a:hover{
+    text-decoration: underline;
+    color: red;
+  }
+  
+  .legal-pages > li:nth-child(-n+2)::after{
     content: '|';
     color: white;
     margin-left: 20px;
     
-}
-
-h2, h3{
+  }
+  
+  h2, h3{
     color: black;
     text-decoration: underline
-}
-.quick-links{
+  }
+  .quick-links{
     font-weight: bold;
     text-align: center;
-}
-
-/* news letter and social */
-
-.newsletter form input{
+  }
+  
+  /* news letter and social */
+  
+  .newsletter form input{
     border-radius: 4px;
     outline: 1px solid yellow;
     font-family: 'Times New Roman', Times, serif;
-}
-
-.newsletter form input::placeholder{
+  }
+  
+  .newsletter form input::placeholder{
     padding-left: 2px;
     color: #333333b1;
-}
-
-.newsletter form input:focus-within{
+  }
+  
+  .newsletter form input:focus-within{
     
     box-shadow: 2px 1px 12px yellow;
-}
-
-.newsletter form button{
+  }
+  
+  .newsletter form button{
     cursor: pointer;
     background-color: white;
     border: 1px solid rgba(255, 0, 0, 0.34);
     border-radius: 4px;
     padding: 2px;
     font: bold 0.9em 'Times New Roman', Times, serif;
-}
-
-.newsletter form button:hover{
+  }
+  
+  .newsletter form button:hover{
     box-shadow: 2px 1px 12px red;
-}
-
-.social{
-    margin-top: 25px;
+  }
+  
+  .social{
+    margin: 25px auto 0;
     display: flex;
     max-width: 150px;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
     
-}
-.social:hover{
-    cursor: pointer;
-}
-
-
+  }
   
-
- /* Respsonsive Design - laptops */
-
- /* @media screen and (min-width: 1201px) and (max-width: 1440px){
-    
-    .searchbar{
-       max-width: 600px;
-
-    }
-    
-    .searchbar input{
-        width: 500px;
-
-    }
-
-    .navigation{
-        height: 180px;
-    }
-
-    nav ul li{
-        font-size: 1.4em;
-
-    }
-    
- } */
-
-/* Respsonsive Design - Tablets and Smaller Laptop Sizes*/
-
- /* @media screen and (min-width: 1081px) and (max-width: 1200px){
-
-    .searchbar{
-        max-width: 500px;
-     }
-     
-     .searchbar input{
-         width: 400px;
- 
-     }
-
-     .searchbar-container{
-        margin-left: 0px; 
-
-    }
-
-     .navigation{
-         height: 150px;
-     }
- 
-     nav ul li{
-         font-size: 1.2em;
- 
-     }
-
- } */
-
-
- /* Respsonsive Design - Phone and other tablet sizes */
-
- /* @media screen and (max-width: 1080px){
-
-    .main-header{
-        justify-content: center;
-    }
-    .logo{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin: 40px 0px;
-    }
-
-
-    .searchbar{
-        margin-left: 0px;
-        margin-top: 10px;
-        padding: 12px;
-
-     }
-     
-     .searchbar input{
-         min-width: 200px;
-         max-width: 250px;
- 
-     }
- 
-     .navigation{
-         height: 120px;
-         margin: 30px auto;
-         max-width: 600px;
-         min-width: fit-content;
-     }
-     nav ul{
-        gap: 25px;
-     }
-
-     nav ul li{
-         font-size: 1em;
-         padding: 0px;   
-     }
-
- } */
-
- /* Responsive designs */
-/* 
-@media screen and (max-width: 970px){
-    footer{
-        padding-top: 40px;
-        flex-direction: column;
-        align-items: center;
-        font-size: 1em;
-    }
-    .first,
-    .middle-column,
-    .newsletter,
-    .copyright,
-    footer ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-   .links{
-    width: 100%;
-    margin-bottom: 20px;
-   
-   }
-   .social-links{
-    padding-left: 15px;
-    
-   }
-    .copyright{
-        margin: 40px 0px;
-    }
-} */
+  .social:hover{
+    cursor: pointer;
+  }

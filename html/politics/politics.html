@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Script for socila media links imported from font awesome -->
-    <script
-      src="https://kit.fontawesome.com/4eed10a0c3.js"
-      crossorigin="anonymous"
-    ></script>
+    <meta name="description" content="Politics news and updates" />
+    <meta name="keywords" content="politics, news, updates" />
+    <meta name="author" content="Multimedia News" />
+    <title>Politics News</title>
 
     <link
       rel="stylesheet"
@@ -16,37 +15,64 @@
 
     <link rel="stylesheet" href="/styles/normalize.css" type="text/css" />
     <link rel="stylesheet" href="/styles/politics.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/politics-Respnsive.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/policy.pages.css" type="text/css" />
-  
     <link
       rel="stylesheet"
-      href="/styles/Politics-Respnsive.css"
+      href="/styles/politics-Respnsive.css"
       type="text/css"
     />
-    <title>Politics News</title>
+    <link rel="stylesheet" href="/styles/policy.pages.css" type="text/css" />
+    <link rel="stylesheet" href="/SlickNav/dist/slicknav.css" />
 
+    <!-- import jquery Library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Script for social media links imported from font awesome -->
+    <script
+      src="https://kit.fontawesome.com/4eed10a0c3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script files -->
     <script src="/scripts/utilities/header.js" defer></script>
     <script src="/scripts/feed/main.feed.js" defer></script>
-    <script src="/scripts/jQuery.js"></script>
+    <script src="/scripts/jQuery.js" defer></script>
     <script src="/scripts/utilities/footer.js" defer></script>
     <script src="/scripts/utilities/subscribe.js" defer></script>
     <script src="/scripts/utilities/modal.js" defer></script>
-
+    <script src="/SlickNav/jquery.slicknav.js" defer></script>
   </head>
+
   <body>
-    <header>
-      
+    <header id="site-header">
+      <!-- Scripts go here -->
     </header>
-    <main class="politics">
-      
-      <div class="top-picture">
-        <a href="https://www.apple.com/macbook-pro/">
-          <img src="Images/top-ad.png" alt="" />
-        </a>
+    <main class="general">
+      <div class="navigation">
+        <nav class="navbar">
+          <ul id="menu">
+            <li><a href="/html/home/home.html">Home</a></li>
+            <li><a href="#" class="active">Politics</a></li>
+            <li><a href="/html/sports/sports.html">Sports</a></li>
+            <li>
+              <a href="/html/entertainment/entertainment.html">Entertainment</a>
+            </li>
+            <li><a href="/html/economics/economics.html">Economics</a></li>
+
+            <li class="slicknav-only">
+              <a href="/html/weather/weather.html">Weather</a>
+            </li>
+            <li class="slicknav-only">
+              <a href="/html/market/market.html">Market</a>
+            </li>
+            <li class="slicknav-only">
+              <a href="/html/contact/contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </div>
 
-      <section class="articles-container">
+      <section class="ad-container">
+        <!-- Left Sidebar with Ads -->
         <div class="main-content left">
           <!-- Left column with two stacked pictures -->
           <aside class="left-column-main">
@@ -63,10 +89,13 @@
           </aside>
         </div>
 
-        <section id="feeds" class="news-container">
-          <h3 id="loading">Loading feed...</h3>
-          <!-- News fetch data goes here -->
-          <div class="news-container" id="feeds"></div> 
+        <section class="feed-container">
+          <h3>Market Media</h3>
+
+          <div class="news-container" id="feeds">
+            <!-- News fetch data goes here -->
+            <h3 id="loading">Loading sports feed...</h3>
+          </div>
         </section>
 
         <div class="main-content right">
@@ -83,6 +112,8 @@
               </div>
             </a>
           </aside>
+          <!-- Back to Top Button -->
+          <button id="back-to-top-btn" title="Back to Top">↑</button>
         </div>
       </section>
 
@@ -198,7 +229,7 @@
     </main>
 
     <footer id="site-footer">
-    <!-- Footer script -->
+      <!-- Footer script -->
     </footer>
   </body>
 </html>

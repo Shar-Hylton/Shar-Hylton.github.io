@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="/styles/contact.css" type="text/css" />
     <link rel="stylesheet" href="/styles/policy.pages.css" type="text/css" />
 
+    <link rel="stylesheet" href="/SlickNav/dist/slicknav.css" />
+
     <!-- Script for social media links imported from font awesome -->
 
     <script
@@ -31,6 +33,7 @@
     <script src="/scripts/utilities/footer.js" defer></script>
     <script src="/scripts/utilities/subscribe.js" defer></script>
     <script src="/scripts/utilities/modal.js" defer></script>
+    <script src="/SlickNav/jquery.slicknav.js" defer></script>
   </head>
   <body>
     <header id="site-header">
@@ -38,18 +41,24 @@
     </header>
 
     <main>
-      <section class="navigation">
+      <div class="navigation">
         <nav class="navbar">
-          <ul>
+          <ul id="menu">
             <li><a href="/html/home/home.html">Home</a></li>
             <li><a href="/html/politics/politics.html">Politics</a></li>
             <li><a href="/html/sports/sports.html">Sports</a></li>
             <li>
               <a href="/html/entertainment/entertainment.html">Entertainment</a>
             </li>
+            <li><a href="#" class="active">Economics</a></li>
+
+            <li class="slicknav-only"><a href="/html/weather/weather.html">Weather</a></li>
+            <li class="slicknav-only"><a href="/html/market/market.html">Market</a></li>
+            <li class="slicknav-only"><a href="/html/contact/contact.html">Contact</a></li>
           </ul>
         </nav>
-      </section>
+      </div>
+
 
       <section class="hero">
         <div class="overlay-box">Contact Us</div>

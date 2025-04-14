@@ -4,11 +4,10 @@
 // const apiKey = "a577c6c8fdc7451db9fed7ca041c61c8";
 // const apiKey = "221adb9d0efc4378bf1a13211c213319";
 
+
 const apiKey = "21a5cc266b474704b8e6035ae92a7d90";
 
-let category = document.querySelector("main").className.trim().toLowerCase();
-
-const feedUrl = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`;
+const feedUrl = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${apiKey}`;
 
 let allArticles = [];
 

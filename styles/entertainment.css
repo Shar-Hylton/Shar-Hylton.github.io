@@ -107,7 +107,7 @@ main {
      justify-content: center;
      margin: 0px auto 2px;
      background: linear-gradient(45deg, blue,red, rgb(0, 0, 0));
-     height: 60px;
+     height: 40px;
      align-items: center;
      z-index: 9;
      position: sticky;
@@ -123,7 +123,7 @@ main {
  }
  
  nav ul li{
-     font-size: 1.4em;
+     font-size: 1.2em;
      font-weight: bold;
      padding: 0 20px;
      
@@ -151,6 +151,31 @@ main {
 
 /* Blogs */
 
+/*--button to go up--*/
+#back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s, background-color 0.3s;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  #back-to-top-btn:hover {
+    opacity: 1;
+    background-color: #2980b9;
+  }
+  
 .main-area{
     display: flex;
     justify-content: center;
@@ -212,6 +237,13 @@ main {
     overflow: hidden;
 }
 
+.feed-card:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
 #feeds a{
     text-decoration: none;
     color: #000000;
@@ -230,6 +262,14 @@ main {
     background: #f9f9f9;
     border-left: 5px solid #007bff;
 }
+
+.full-article p{
+    transition: font-size 0.3s ease-in-out;
+  }
+  
+  .full-article p:hover{
+    font-size: 1.5em;
+  }
 
 #feeds #loading{
     font-size: 1.5em;
@@ -255,6 +295,16 @@ main {
 #feeds h3{
     color: black;
     font-size: 16px
+}
+
+#feeds span p{
+    font-size: 0.8em;
+    color: #333;
+}
+
+#feeds h4{
+    color: blue;
+    font-size: 1.4em; 
 }
 
 .feed-card p{
@@ -453,134 +503,127 @@ main {
     text-align: center;
 }
 
-/* footer style */
-footer{
+ /* footer css */
+
+ footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
-    background-color: #cccccc76;
-    /* border-radius: 0 0 20px 20px; */
+    background: url("/images/sun-208428.jpg") no-repeat fixed;
+    border-radius: 0 0 20px 20px;
+    border: 2px solid white;
     
-}
-
-footer ul{
-    list-style: none;
-    font-size: 1.125em;
-}
-
-footer ul li{
-    margin-bottom: 3px;
-}
-
-footer ul li a{
-    text-decoration: none;
-    margin-left: -40px;
-    color:#0000ff;
-}
-
-footer ul li a:hover{
-    color: red;
-    text-decoration: underline;
-}
-
-.footer-container{
+  }
+  
+  .footer-container{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
-
-/* copyright and policy links */
-
-.policy{
+    height: 30vh;
+  }
+  
+  /* copyright and policy links */
+  
+  .policy{
     display: flex;
     width: 100%;
     background-color: #000000;
-    /* border-radius: 0 0 20px 20px; */
+    border-radius: 0 0 20px 20px;
     align-items: center;
-
-}
-
-.copyright{ 
+  
+  }
+  
+  .copyright{ 
     width: 100%;
     font-size: 1em;
     color: rgb(255, 255, 255);
     text-decoration: underline;
-
-}
-.copyright p{
+  
+  }
+  .copyright p{
     text-align: center;
     font-size: 0.9em;
-}
-
-
-.legal-pages{
+  }
+  
+  
+  .legal-pages{
     display: flex;
     position: absolute;
-
-}
-
-.legal-pages li{
-    padding-left: 60px;
+  
+  }
+  
+  .legal-pages li{
+    padding-left: 20px;
     font-size: 0.75em;
     
-}
+  }
 
-.legal-pages > li:nth-child(-n+2)::after{
+  .legal-pages li a{
+    color: white;
+    text-decoration: none;
+  }
+  .legal-pages li a:hover{
+    text-decoration: underline;
+    color: red;
+  }
+  
+  .legal-pages > li:nth-child(-n+2)::after{
     content: '|';
     color: white;
     margin-left: 20px;
     
-}
-
-h2, h3{
-    color: rgb(0, 0, 0);
+  }
+  
+  h2, h3{
+    color: black;
     text-decoration: underline
-}
-.quick-links{
+  }
+  .quick-links{
     font-weight: bold;
     text-align: center;
-}
-
-/* news letter and social */
-
-.newsletter form input{
+  }
+  
+  /* news letter and social */
+  
+  .newsletter form input{
     border-radius: 4px;
     outline: 1px solid yellow;
     font-family: 'Times New Roman', Times, serif;
-}
-
-.newsletter form input::placeholder{
+  }
+  
+  .newsletter form input::placeholder{
     padding-left: 2px;
     color: #333333b1;
-}
-
-.newsletter form input:focus-within{
+  }
+  
+  .newsletter form input:focus-within{
     
     box-shadow: 2px 1px 12px yellow;
-}
-
-.newsletter form button{
+  }
+  
+  .newsletter form button{
     cursor: pointer;
     background-color: white;
     border: 1px solid rgba(255, 0, 0, 0.34);
     border-radius: 4px;
     padding: 2px;
     font: bold 0.9em 'Times New Roman', Times, serif;
-}
-
-.newsletter form button:hover{
+  }
+  
+  .newsletter form button:hover{
     box-shadow: 2px 1px 12px red;
-}
-
-.social{
-    margin-top: 25px;
+  }
+  
+  .social{
+    margin: 25px auto 0;
     display: flex;
     max-width: 150px;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
     
-}
-.social:hover{
+  }
+  
+  .social:hover{
     cursor: pointer;
-}
-
+  }

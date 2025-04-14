@@ -2,16 +2,7 @@ function loadFooter() {
   const footerHTML = `
       
         <div class="footer-container">
-        <section class="footer-nav-links">
-          <h2>Quick Links</h2>
-
-          <ul class="quick-links">
-            <li><a href="/html/economics/economics.html">Economics</a></li>
-            <li><a href="/html/contact/contact.html">Contact Us</a></li>
-            <li><a href="/html/market/market.html">Weather</a></li>
-            <li><a href="/html/weather/weather.html">Market</a></li>
-          </ul>
-        </section>
+        
 
        <section class="newsletter">
   <h3>Subscribe To Our Newsletter</h3>

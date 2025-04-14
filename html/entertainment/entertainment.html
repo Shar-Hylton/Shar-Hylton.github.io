@@ -12,6 +12,16 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
     />
     <link rel="stylesheet" href="/styles/policy.pages.css" type="text/css" />
+
+    <!-- slicknav.css -->
+    <link rel="stylesheet" href="/SlickNav/dist/slicknav.css" />
+
+    <!-- jquery src code -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <!-- font awesome script -->
     <script
       src="https://kit.fontawesome.com/4eed10a0c3.js"
@@ -25,7 +35,7 @@
     <script src="/scripts/utilities/footer.js" defer></script>
     <script src="/scripts/utilities/subscribe.js" defer></script>
     <script src="/scripts/utilities/modal.js" defer></script>
-    
+    <script src="/SlickNav/jquery.slicknav.js" defer></script>
   </head>
   <body>
     <header id="site-header">
@@ -33,16 +43,30 @@
     </header>
 
     <main class="entertainment">
-      <section class="navigation">
+      <div class="navigation">
         <nav class="navbar">
-          <ul>
+          <ul id="menu">
             <li><a href="/html/home/home.html">Home</a></li>
             <li><a href="/html/politics/politics.html">Politics</a></li>
             <li><a href="/html/sports/sports.html">Sports</a></li>
-            <li><a href="#" class="active">Entertainment</a></li>
+            <li>
+              <a href="#" class="active">Entertainment</a>
+            </li>
+            <li><a href="/html/economics/economics.html">Economics</a></li>
+
+            <li class="slicknav-only">
+              <a href="/html/weather/weather.html">Weather</a>
+            </li>
+            <li class="slicknav-only">
+              <a href="/html/market/market.html">Market</a>
+            </li>
+            <li class="slicknav-only">
+              <a href="/html/contact/contact.html">Contact</a>
+            </li>
           </ul>
         </nav>
-      </section>
+      </div>
+
       <section class="main-area">
         <!-- Left Sidebar with Ads -->
         <section class="left-sidebar">
@@ -103,6 +127,9 @@
           </div>
         </section>
       </section>
+
+      <!-- Scroll to top -->
+      <button id="back-to-top-btn" title="Back to Top">↑</button>
     </main>
 
     <footer id="site-footer">

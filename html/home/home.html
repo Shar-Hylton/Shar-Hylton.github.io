@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="/styles/home.css" type="text/css" />
     <link rel="stylesheet" href="/styles/policy.pages.css" type="text/css" />
     <link
-  rel="stylesheet"
-  href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css"
-/>
-    
+      rel="stylesheet"
+      href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <!-- silicknav.css -->
+    <link rel="stylesheet" href="/SlickNav/dist/slicknav.css" />
+
+    <!-- import jquery library -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -27,30 +30,40 @@
       src="https://kit.fontawesome.com/4eed10a0c3.js"
       crossorigin="anonymous"
     ></script>
-   <script src="/scripts/utilities/header.js" defer></script>
-   <script src="/scripts/feed/main.feed.js" defer></script>
-   <script src="/scripts/jQuery.js"></script>
-   <script src="/scripts/utilities/footer.js" defer></script>
-   <script src="/scripts/utilities/subscribe.js" defer></script>
-   <script src="/scripts/utilities/modal.js" defer></script>
-   
-  
+
+    <script src="/scripts/utilities/header.js" defer></script>
+    <script src="/scripts/feed/main.feed.js" defer></script>
+    <script src="/scripts/jQuery.js"></script>
+    <script src="/scripts/utilities/footer.js" defer></script>
+    <script src="/scripts/utilities/subscribe.js" defer></script>
+    <script src="/scripts/utilities/modal.js" defer></script>
+    <script src="/SlickNav/jquery.slicknav.js" defer></script>
   </head>
   <body>
     <header id="site-header">
       <!-- Scripts go here -->
-     
     </header>
 
     <main>
-      <div class="navigation" id="mobile_menu">
+      <div class="navigation">
         <nav class="navbar">
-          <ul>
+          <ul id="menu">
             <li><a href="#" class="active">Home</a></li>
             <li><a href="/html/politics/politics.html">Politics</a></li>
             <li><a href="/html/sports/sports.html">Sports</a></li>
             <li>
               <a href="/html/entertainment/entertainment.html">Entertainment</a>
+            </li>
+            <li><a href="/html/economics/economics.html">Economics</a></li>
+
+            <li class="slicknav-only">
+              <a href="/html/weather/weather.html">Weather</a>
+            </li>
+            <li class="slicknav-only">
+              <a href="/html/market/market.html">Market</a>
+            </li>
+            <li class="slicknav-only">
+              <a href="/html/contact/contact.html">Contact</a>
             </li>
           </ul>
         </nav>
@@ -61,6 +74,7 @@
 
         <div class="news-container" id="feeds">
           <!-- News fetch data goes here -->
+          <h3 id="loading">Loading home feed...</h3>
         </div>
       </section>
     </main>
@@ -68,6 +82,5 @@
     <footer id="site-footer">
       <!-- footer.js here -->
     </footer>
-
   </body>
 </html>

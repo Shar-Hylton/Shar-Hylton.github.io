@@ -28,3 +28,48 @@ $(document).ready(function () {
       }
     );
   });
+  
+  // Silicknav initialization
+  
+  $(document).ready(function () {
+    $('#menu').slicknav({
+      prependTo: '.navigation', // Where the menu will be added
+      label: '', // Text for the hamburger button (leave empty for no text)
+      duration: 200, // Animation duration
+      easingOpen: 'swing', // Easing for opening animation
+      easingClose: 'swing', // Easing for closing animation
+      closeOnClick: true, // Close menu when a link is clicked
+    });
+
+    $('#menu .slicknav-only').hide();
+  });
+
+
+
+// scroll to top button
+
+  $(document).ready(function () {
+    const $backToTopBtn = $('#back-to-top-btn');
+  
+    // Show/hide the button on scroll
+    $(window).on('scroll', function () {
+      if ($(this).scrollTop() > 300) {
+        $backToTopBtn.fadeIn().css('opacity', '0.7');
+      } else {
+        $backToTopBtn.css('opacity', '0');
+        setTimeout(function () {
+          if ($(window).scrollTop() <= 300) {
+            $backToTopBtn.fadeOut();
+          }
+        }, 300);
+      }
+    });
+  
+    // Scroll to top on click
+    $backToTopBtn.on('click', function () {
+      $('html, body').animate({ scrollTop: 0 }, 'smooth');
+    });
+  });
+  
+
+

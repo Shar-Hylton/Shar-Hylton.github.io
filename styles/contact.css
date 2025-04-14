@@ -41,7 +41,7 @@ header{
   justify-content: center;
   margin: 0 auto 5px;
   background: linear-gradient(45deg, blue,red, rgb(0, 0, 0));
-  height: 60px;
+  height: 40px;
   align-items: center;
   position: sticky;
   top:0;
@@ -150,6 +150,10 @@ nav ul li a:hover{
 }
 
 /* HERO SECTION: Reduce extra space */
+
+main{
+  background-color: #f5f5f5;
+}
  
 .hero {
   background: url("/html/contact/Images/background.jpeg") center/cover no-repeat;
@@ -215,36 +219,17 @@ footer{
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
-  background: url(/images/sun-208428.jpg) no-repeat fixed;
+  background: url("/images/sun-208428.jpg") no-repeat fixed;
   border-radius: 0 0 20px 20px;
+  border: 2px solid white;
   
-}
-
-footer ul{
-  list-style: none;
-  font-size: 1.125em;
-  
-}
-
-footer ul li{
-  margin-bottom: 3px;
-}
-
-footer ul li a{
-  text-decoration: none;
-  margin-left: -40px;
-  color:#0000ff;
-}
-
-footer ul li a:hover{
-  color: red;
-  text-decoration: underline;
 }
 
 .footer-container{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  height: 30vh;
 }
 
 /* copyright and policy links */
@@ -278,9 +263,18 @@ footer ul li a:hover{
 }
 
 .legal-pages li{
-  padding-left: 60px;
+  padding-left: 20px;
   font-size: 0.75em;
   
+}
+
+.legal-pages li a{
+  color: white;
+  text-decoration: none;
+}
+.legal-pages li a:hover{
+  text-decoration: underline;
+  color: red;
 }
 
 .legal-pages > li:nth-child(-n+2)::after{
@@ -331,28 +325,14 @@ h2, h3{
 }
 
 .social{
-  margin-top: 25px;
+  margin: 25px auto 0;
   display: flex;
   max-width: 150px;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
   
 }
+
 .social:hover{
   cursor: pointer;
-}
-
-/* RESPONSIVE FIX: Make it a single column layout on smaller screens */
-@media (max-width: 1024px) {
-  .hero {
-    min-height: 60vh;
-  }
-  .contact-container {
-    grid-template-columns: 1fr; /* Switch to 1 column layout */
-    width: 100%;
-    gap: 1.5rem;
-  }
-  .contact-box {
-    width: 90%; /* Expand boxes for readability */
-    margin: 0 auto; /* Center boxes */
-  }
 }

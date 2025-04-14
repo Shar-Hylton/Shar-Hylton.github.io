@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entertainment Page</title>
+
+    <link rel="stylesheet" href="/styles/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/market.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+    <link rel="stylesheet" href="/styles/policy.pages.css" type="text/css" />
+    <!-- slicknav.css -->
+    <link rel="stylesheet" href="/SlickNav/dist/slicknav.css" />
+    <!-- font awesome script -->
+    <script
+      src="https://kit.fontawesome.com/4eed10a0c3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery src code -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- news data script -->
+    <script src="/scripts/utilities/header.js" defer></script>
+    <script src="/scripts/feed/market.feed.js" defer></script>
+    <script src="/scripts/jQuery.js"></script>
+    <script src="/scripts/utilities/footer.js" defer></script>
+    <script src="/scripts/utilities/subscribe.js" defer></script>
+    <script src="/scripts/utilities/modal.js" defer></script>
+    <script src="/SlickNav/jquery.slicknav.js" defer></script>
+  </head>
+  <body>
+    <header id="site-header">
+      <!-- Script goes here -->
+    </header>
+
+    <main>
+        <div class="navigation">
+            <nav class="navbar">
+              <ul id="menu">
+                <li><a href="/html/home/home.html">Home</a></li>
+                <li><a href="/html/politics/politics.html">Politics</a></li>
+                <li><a href="/html/sports/sports.html" >Sports</a></li>
+                <li>
+                  <a href="/html/entertainment/entertainment.html">Entertainment</a>
+                </li>
+                <li><a href="/html/economics/economics.html">Economics</a></li>
+    
+                <li class="slicknav-only"><a href="/html/weather/weather.html">Weather</a></li>
+                <li class="slicknav-only"><a href="#" class="active">Market</a></li>
+                <li class="slicknav-only"><a href="/html/contact/contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+    
+
+      <section class="ad-container">
+        <!-- Left Sidebar with Ads -->
+        <section class="left-sidebar">
+          <div class="left-1-ad">
+            <a href="https://www.polestar.com/us/">
+              <img src="/html/market/left/Polstar.jpeg" alt="Advertisement" />
+              <p class="ad-label">Lease for $799 at 0.99% for 24 months?</p>
+            </a>
+          </div>
+          <div class="left-2-ad">
+            <a
+              href="https://ca.gymshark.com/?gad_source=1&gclid=Cj0KCQjw2N2_BhCAARIsAK4pEkUyOLxUJv8dfBhyp2woZX5fUlCsYLGCv35LVNdYHizy7nJcq5daNUEaAuK0EALw_wcB&gclsrc=aw.ds"
+            >
+              <img src="/html/market/left/GymShark.jpeg" />
+              <p class="ad-label">GET YOUR GymShark MEMBERSHIP TODAY</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="feed-container">
+          <h3>Market Media</h3>
+
+          <div class="news-container" id="feeds">
+            <!-- News fetch data goes here -->
+            <h3 id="loading">Loading sports feed...</h3>
+          </div>
+        </section>
+
+        <!-- Right Sidebar with Ads -->
+        <section class="right-sidebar">
+          <div class="left-1-ad">
+            <a href="https://www.dove.com/ca/en/hair-care/shampoo.html">
+              <img
+                src="/html/market/right/body wash.jpeg"
+                alt="Advertisement"
+              />
+              <p class="ad-label">New year fragrances</p>
+            </a>
+          </div>
+          <div class="left-2-ad">
+            <a href="https://www.ikea.com/ca/en/cat/mattresses-bm002/">
+              <img src="/html/market/right/mattress.jpeg" />
+              <p class="ad-label">More comfortable than ever</p>
+            </a>
+          </div>
+        </section>
+      </section>
+       <!-- Scroll to top -->
+       <button id="back-to-top-btn" title="Back to Top">↑</button>
+
+    </main>
+
+    <footer id="site-footer">
+      <!-- Script goes here -->
+    </footer>
+  </body>
+</html>
