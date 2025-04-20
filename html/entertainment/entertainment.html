@@ -67,69 +67,123 @@
         </nav>
       </div>
 
-      <section class="main-area">
-        <!-- Left Sidebar with Ads -->
-        <section class="left-sidebar">
-          <div class="ad-container">
-            <h4>Advertisement</h4>
-            <img src="/api/placeholder/250/250" alt="Advertisement" />
-          </div>
+      <section class="main-container">
+        <!-- left Ads block -->
+        <section class="left-ads ads">
+          <!-- first ad -->
+          <article class="ads-card">
+            <div class="ads-img-container">
+              <a href="https://a.co/d/9EaxjSK" target="_blank">
+                <img
+                  src="https://m.media-amazon.com/images/I/717z8aUW+qL._AC_SX466_.jpg"
+                  alt="advertisements"
+                  class="ads-img"
+              />
+              <span
+                ><p class="ads-source">
+                  amazon.ca
+                </p></span
+              >
+              <span><p class="article-name">ads.</p></span></a>
+            </div>
 
-          <div class="links">
-            <h3>Trending Topics</h3>
-            <ul>
-              <li><a href="#">Celebrity News</a></li>
-              <li><a href="#">Movies & TV</a></li>
-              <li><a href="#">Music</a></li>
-              <li><a href="#">Award Shows</a></li>
-              <li><a href="#">Streaming</a></li>
-            </ul>
-          </div>
+            <div class="ads-btn-container">
+              <p class="shop-btn">
+                <a href="https://a.co/d/9EaxjSK" target="_blank">shop</a>
+              </p>
+            </div>
+          </article>
 
-          <div class="ad-container">
-            <p>Advertisement</p>
-            <img src="/api/placeholder/250/300" alt="Advertisement" />
+          <!-- second ad -->
+          <article class="ads-card">
+            <div class="ads-img-container">
+              <a href="https://a.co/d/1Q64DIx" target="_blank"
+                ><img
+                  src="https://m.media-amazon.com/images/I/71ntqXVSmKL._AC_SX425_.jpg"
+                  alt="Advertisement"
+                  class="ads-img"
+                />
+                <span><p class="ads-source">amazon.ca</p></span>
+                <span><p class="article-name">ads.</p></span>
+              </a>
+            </div>
+
+            <div class="ads-btn-container">
+              <p class="shop-btn">
+                <a href="https://a.co/d/1Q64DIx" target="_blank">shop</a>
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <section class="feed-container">
+          <h3>Entertainment</h3>
+
+          <div class="news-container" id="feeds">
+            <!-- News fetch data goes here -->
+            <h3 id="loading">Loading entertainment feed...</h3>
           </div>
         </section>
 
-        <section class="main-page-container">
-          <!-- Main Content Area -->
-          <div class="content-area">
-            <h1 class="section-header">Entertainment News</h1>
+        <!-- right Ads block -->
+        <section class="right-ads ads">
+          <!-- first ad -->
 
-            <section class="news-container" id="feeds">
-              <h3 id="loading">Loading sports feed...</h3>
-              <!-- News fetch data goes here -->
-            </section>
-          </div>
-        </section>
-        <!-- Right Sidebar with Ads -->
-        <section class="right-sidebar">
-          <div class="ad-container">
-            <h4>Advertisement</h4>
-            <img src="/api/placeholder/250/250" alt="Advertisement" />
-          </div>
+          <article class="ads-card">
+            <div class="ads-img-container">
+              <a href="https://a.co/d/69LYBLX" target="_blank">
+                <img
+                  src="https://m.media-amazon.com/images/I/91uW8+p6ZaL._AC_SY450_.jpg"
+                  alt="advertisements"
+                  class="ads-img"
+              /></a>
+              <a href="https://a.co/d/69LYBLX" target="_blank"> <span
+                ><p class="ads-source">
+                  amazon.ca
+                </p></span
+              ></a>
+              <span><p class="article-name">ads.</p></span>
+            </div>
 
-          <div class="links">
-            <h3>Top Stories</h3>
-            <ul>
-              <li><a href="#">Box Office Results</a></li>
-              <li><a href="#">TV Show Reviews</a></li>
-              <li><a href="#">Celebrity Interviews</a></li>
-              <li><a href="#">New Music Releases</a></li>
-              <li><a href="#">Upcoming Movies</a></li>
-            </ul>
-          </div>
+            <div class="ads-btn-container">
+              <p class="shop-btn">
+                <a href="https://a.co/d/69LYBLX" target="_blank">shop</a>
+              </p>
+            </div>
+          </article>
 
-          <div class="ad-container">
-            <p>Advertisement</p>
-            <img src="/api/placeholder/250/300" alt="Advertisement" />
-          </div>
+          <!-- second ad -->
+          <article class="ads-card">
+            <div class="ads-img-container">
+              <a
+                href="https://a.co/d/dxrrt9n" target="_blank"
+                ><img
+                  src="https://m.media-amazon.com/images/I/81UZkPv9RcL._AC_SY450_.jpg"
+                  alt="Tv Stand with Draweers and power outlets"
+                  class="ads-img"
+                />
+                <span
+                  ><a href="https://a.co/d/dxrrt9n" target="_blank"
+                    ><p class="ads-source">amazon.ca</p></a
+                  ></span
+                >
+                <span><p class="article-name">ads.</p></span>
+              </a>
+            </div>
+
+            <div class="ads-btn-container">
+              <p class="shop-btn">
+                <a
+                  href="https://a.co/d/dxrrt9n" target="_blank"
+                  >shop</a
+                >
+              </p>
+            </div>
+          </article>
+          <!-- Back to Top Button -->
+          <button id="back-to-top-btn" title="Back to Top">↑</button>
         </section>
       </section>
-
-      <!-- Scroll to top -->
-      <button id="back-to-top-btn" title="Back to Top">↑</button>
     </main>
 
     <footer id="site-footer">

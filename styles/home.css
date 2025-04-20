@@ -1,6 +1,6 @@
 html{
     
-    background: url(/images/sun-208428.jpg) no-repeat fixed;
+    background: url("/images/sun-208428.jpg") no-repeat fixed;
 
 }
 
@@ -149,9 +149,30 @@ main{
     
 }
 
-/* .feed-container{
-    
-} */
+/*--button to go up--*/
+#back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s, background-color 0.3s;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#back-to-top-btn:hover {
+  opacity: 1;
+  background-color: #2980b9;
+}
 
 .feed-container h3{
     font-size: 1.8em;
@@ -272,7 +293,7 @@ main{
     position: absolute; 
     bottom: 10px; 
     left: 10px; 
-    width: 120px;
+    width: 150px;
   }
   
   /* Style the icons with a rounded background */
@@ -371,12 +392,13 @@ footer{
   .legal-pages li{
     padding-left: 20px;
     font-size: 0.75em;
-    
+    list-style: none;
   }
 
   .legal-pages li a{
-    color: white;
+    color: blue;
     text-decoration: none;
+    
   }
   .legal-pages li a:hover{
     text-decoration: underline;
@@ -442,3 +464,142 @@ footer{
   .social:hover{
     cursor: pointer;
   }
+
+
+  @media screen and (max-width: 1340px) {
+
+    .searchbar input{
+      width: 400px;
+    }
+    .feed-container h3{
+      font-size: 1.8em;
+      text-align: center;
+    
+    }
+
+    .policy{
+      flex-direction: column-reverse;
+      height: 10vh;
+
+    }
+    .copyright{
+      margin: 0 0 20px 0;
+    }
+
+    .legal-pages{
+      margin: 0 auto 8px;
+      padding: 0;
+    }
+
+  }
+   
+  @media screen and (max-width: 1070px) {
+
+    .main-header{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     
+    }
+    .logo{
+      margin-left: 0px;
+    }
+    .search-container{
+      margin: 20px auto;
+    }
+    .searchbar{
+      margin-left: 0px;
+    }
+    #weather{
+      width: 120px;
+      right: 180px;
+    }
+  }
+
+/* Mobile friendly */
+@media screen and (max-width: 960px) {
+
+  .navbar ul {
+    display: none; 
+  }
+
+.slicknav_menu {
+  background-color: #333; 
+  margin-left: 70px;
+
+}
+
+.slicknav_nav{
+  left: 0;
+}
+
+.searchbar input{
+  width: 240px;
+}
+
+.feed-card img{
+  max-width: 95%;
+  margin: 0 15px;
+
+}
+
+.feed-card{
+  width: 100%;
+  margin: 0;
+  padding: 0 0 60px;
+
+}
+
+#feeds h4{
+  margin: 10px;
+}
+
+.main-header{
+  margin: 0;
+  padding: 0;
+}
+
+.slicknav_nav a {
+  color: white; 
+  text-decoration: none;
+  text-align: center;
+}
+
+.slicknav_nav a:hover{
+  color: red; 
+}
+
+#weather{
+  display:none;
+}
+    
+#weather{
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  top: 40px;
+  width: 160px;
+  padding: 5px;
+}
+.navigation{
+  padding: 0;
+  margin: 0;
+  font-size: small;
+  height: auto;
+  justify-content: flex-start;
+}
+
+.legal-pages li{
+  padding-left: 10px;
+  font-size: 0.75em; 
+}
+
+.legal-pages > li:nth-child(-n+2)::after{
+  content: '|';
+  color: white;
+  margin-left: 10px;
+    
+}
+
+}

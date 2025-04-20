@@ -71,5 +71,46 @@ $(document).ready(function () {
     });
   });
   
+// ads fade in
 
+
+const animateAds = () => {
+  let leftDone = false;
+  let rightDone = false;
+
+  // Delay function
+  setTimeout(() => {
+    $(".left-ads .ads-card").each(function (index) {
+      const card = $(this);
+      setTimeout(() => {
+        card.addClass("animate-in");
+        if (index === $(".left-ads .ads-card").length - 1) {
+          leftDone = true;
+          checkDone();
+        }
+      }, index * 300); 
+    });
+
+    $(".right-ads .ads-card").each(function (index) {
+      const card = $(this);
+      setTimeout(() => {
+        card.addClass("animate-in");
+        if (index === $(".right-ads .ads-card").length - 1) {
+          rightDone = true;
+          checkDone();
+        }
+      }, index * 300); 
+    });
+  }, 1000); // wait 1s before starting animations
+
+  const checkDone = () => {
+    if (leftDone && rightDone) {
+      console.log("All ads animated!");
+    }
+  };
+};
+
+$(document).ready(() => {
+  animateAds();
+});
 

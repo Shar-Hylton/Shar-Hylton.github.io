@@ -1,6 +1,6 @@
 html{
     
-    background-color: #fefefe;
+    background-color: #f5f5f5;
 
 }
 
@@ -18,7 +18,7 @@ body{
     margin: 10px 0 0;
     padding: 30px 0;;
     flex-wrap: wrap;
-    background: url("/images/sun-208428.jpg") no-repeat fixed;
+    background: url("/images/Market_back_drop.JPG") no-repeat fixed;
 
  }
  
@@ -97,7 +97,7 @@ body{
      justify-content: center;
      margin: 0 auto 5px;
      background: linear-gradient(45deg, blue,red, rgb(0, 0, 0));
-     height: 60px;
+     height: 40px;
      align-items: center;
      position: sticky;
      top:0;
@@ -141,7 +141,7 @@ body{
 /* Main Content */
 
 main{
-    background-color: #f5f5f5;
+    
     border-radius: 20px 20px 0px 0px;
     margin-bottom: 80px;
     
@@ -172,7 +172,7 @@ main{
     background-color: #2980b9;
   }
   
-
+/* feed section */
 .feed-container h3{
     font-size: 1.8em;
     color: #000000;
@@ -291,7 +291,7 @@ main{
     position: absolute; 
     bottom: 10px; 
     left: 10px; 
-    width: 120px;
+    width: 150px;
 
   }
   
@@ -338,7 +338,7 @@ main{
   }
 
 /*--Ads--*/
-.ad-container {
+.main-container {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -451,11 +451,12 @@ footer{
   .legal-pages li{
     padding-left: 20px;
     font-size: 0.75em;
+    list-style: none;
     
   }
 
   .legal-pages li a{
-    color: white;
+    color: blue;
     text-decoration: none;
   }
   .legal-pages li a:hover{
@@ -522,3 +523,151 @@ footer{
   .social:hover{
     cursor: pointer;
   }
+
+  
+  @media screen and (max-width: 1340px) {
+    .main-container {
+      flex-direction: column;
+    }
+    .searchbar input{
+      width: 400px;
+    }
+
+    .feed-container{
+      margin: 0 auto;
+    }
+    .feed-container h3{
+      font-size: 1.8em;
+      text-align: center;    
+    }
+    .left-sidebar, .right-sidebar{
+      display: none;
+    }
+
+  }
+   
+  @media screen and (max-width: 1090px) {
+
+    .main-header{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     
+    }
+    .logo{
+      margin-left: 0px;
+    }
+    .search-container{
+      margin: 20px auto;
+    }
+    .searchbar{
+      margin-left: 0px;
+    }
+
+    #weather{
+      width: 120px;
+      right: 180px;
+    }
+
+    .policy{
+      flex-direction: column-reverse;
+      height: 12vh;
+
+    }
+    .copyright{
+      margin: 0 0 28px 0;
+    }
+
+    .legal-pages{
+      margin: 0 auto 8px;
+      padding: 0;
+    }
+  }
+
+/* Mobile friendly */
+@media screen and (max-width: 960px) {
+
+  .navbar ul {
+    display: none; 
+  }
+
+.slicknav_menu {
+  background-color: #333; 
+  margin-left: 70px;
+
+}
+
+.slicknav_nav{
+  left: 0;
+}
+
+.searchbar input{
+  width: 240px;
+}
+
+.feed-card img{
+  max-width: 95%;
+  margin: 0 15px;
+
+}
+
+.feed-card{
+  width: 100%;
+  margin: 0;
+  padding: 0 0 60px;
+
+}
+
+#feeds h4{
+  margin: 10px;
+}
+
+.main-header{
+  margin: 0;
+  padding: 0;
+}
+
+.slicknav_nav a {
+  color: white; 
+  text-decoration: none;
+  text-align: center;
+}
+
+.slicknav_nav a:hover{
+  color: red; 
+}
+
+#weather{
+  display:none;
+}
+    
+#weather{
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  top: 40px;
+  width: 160px;
+  padding: 5px;
+}
+.navigation{
+  padding: 0;
+  margin: 0;
+  font-size: small;
+  height: auto;
+  justify-content: flex-start;
+}
+
+.legal-pages li{
+  padding-left: 10px;
+  font-size: 0.75em; 
+}
+
+.legal-pages > li:nth-child(-n+2)::after{
+  content: '|';
+  color: white;
+  margin-left: 10px;
+    
+}
+
+}

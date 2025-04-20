@@ -4,26 +4,30 @@
 // const apiKey = "a577c6c8fdc7451db9fed7ca041c61c8";
 // const apiKey = "221adb9d0efc4378bf1a13211c213319";
 
-const apiKey = "21a5cc266b474704b8e6035ae92a7d90";
+const apiKey = "a577c6c8fdc7451db9fed7ca041c61c8";
 
 let category = document.querySelector("main").className.trim().toLowerCase();
 
-const feedUrl = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`;
+const feedUrl = `https://newsapi.org/v2/everything?q=${category}&apiKey=${apiKey}`;
 
 let allArticles = [];
 
-const fetchFeed = async () => {
-  try {
-    const response = await fetch(feedUrl);
-    const feedData = await response.json();
+const fetchFeed = () => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch(feedUrl);
+      const feedData = await response.json();
 
-    allArticles = feedData.articles;
-    displayArticles(allArticles);
-  } catch (error) {
-    console.error("Could not fetch news data: ", error);
-  }
+      allArticles = feedData.articles;
+      displayArticles(allArticles);
+
+      resolve(); 
+    } catch (error) {
+      console.error("Could not fetch news data: ", error);
+      reject(error);
+    };
+  });
 };
-
 const cleanContent = (text) => {
   return text
     .replace(/\[\+\d+ chars\]/g, "")
@@ -60,9 +64,9 @@ const displayArticles = (articles) => {
     let feedId = Math.random().toString(36).substr(2, 9); // Generate a unique ID for each feed card
 
     feedOutput += `
-      <div class="feed-card" data-id="${feedId}">
+      <article class="feed-card" data-id="${feedId}" style="margin-bottom:20px; gap: 0 60px;">
         <a href="${url}" target="_blank" rel="noopener noreferrer">
-          <div>
+          <div feed-title>
             <h4>${title}</h4>
             <span><p> Published on: ${publishDate}</p></span>
           </div>
@@ -89,7 +93,7 @@ const displayArticles = (articles) => {
             </span>
           </div>
         </div>
-      </div>
+      </article>
     `;
   });
 
@@ -136,8 +140,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
-    fetchFeed();
-  }, 500); // Slight delay to allow initial rendering
+    fetchFeed().then(() => {
+      setTimeout(() => {
+        animateAds();
+      }, 3000); // Wait 3 seconds AFTER feed loaded
+    });
+  }, 500);
 });
 
 // Weather details at top right of page API
